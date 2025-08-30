@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task11</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+<!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- hover.css animation -->
+    
+  </head>
+  <style>
+    .position-absolute h5 {
+      background-color: #901996;
+      width: 70px;
+      height: 30px;
+    }
+    body {
+      background-color: #f4f7fc;
+    }
+    nav .btn {
+      color: #901996;
+    }
+    .head span {
+      color: #901996;
+    }
+    .g {
+      background-color: #f4f7fc;
+    }
+    .first-img {
+      background-color: #ac1388;
+      overflow: hidden;
+    }
+    .img-green {
+      background-color: #5ec731;
+    }
+    .img-blue {
+      background-color: #1328e4;
+    }
+    .img-little-head::before {
+      content: '';
+      position: absolute;
+      background-color:rgb(255, 255, 255,0.3);
+      height: 230px;
+      width: 350px;
+      
+      transform: skew(-30deg);
+      left: -80px;
+    }
+    .shine-small::before{
+      content: '';
+      position: absolute;
+      background-color:rgb(255, 255, 255,0.3);
+      height: 100px;
+      width: 200px;
+      top: -20px;
+      left: -10px;
+      
+      /* transform: skew(-3deg); */
+     
+    }
+    .shine-small-small::before{
+      content: '';
+      position: absolute;
+      background-color:rgb(255, 255, 255,0.3);
+      height: 45px;
+      width: 70px;
+      top: -0px;
+      left: -10px;
+      
+      
+    }
+    .shine-small-small:hover::before{
+      animation: slide 2s;
+    }
+    .img-little-head:hover::before{
+      animation: slide 2s;
+    }
+    .shine-small:hover::before{
+      animation: slide 2s;
+    }
+    @keyframes slide {
+       0%,100%{
+        left: -80px;
+       }
+       50%{
+        left: 50%;
+       }
+    }
+  
+  </style>
+  <body>
+    <!-- navbar -->
+
+    <nav
+      class="navbar navbar-expand-lg mt-5 container d-flex justify-content-between"
+    >
+      <div class="">
+        <h1 class="head">Our <span>Featured </span>Courses</h1>
+      </div>
+      <div class="d-flex">
+        <button type="button " class="btn position-relative ">
+          All courses
+          <span class="position-absolute start-100 translate-middle badge">
+            <h5 class="badge p-2 mb-4 me-5">New</h5>
+            <!-- <span class="visually-hidden">unread messages</span> -->
+          </span>
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">New One</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recommended</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Most Placed</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header1  -->
+    <section class="g">
+      <div class="container mb-5 mt-4">
+
+        <div class="row ">
+   
+          <div class=" head-card col-xl-4 col-md-6 col-sm-12 ">
+            <div class="card " style="width: 350px">
+              <div class=  "img-little-head position-relative  ">
+                <img src=".//assets/mearn.jpg" class="card-img-top " alt="..." />
+                <div
+                  class="first-img rounded-end-pill w-50 position-absolute bottom-0 start-0 "
+                >
+                  <p class="shine-small m-2 text-light">Recommended</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 7 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 6 Months
+                  </p>
+                </div>
+                <h5 class="card-title">MEA(R)N Stack Web Development Expert</h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.98)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 col-sm-12 ">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/robotic.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="img-blue rounded-end-pill w-25 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small-small m-2 text-light">new</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 9 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 5 Months
+                  </p>
+                </div>
+                <h5 class="card-title">Robotics with AI & IoT Training</h5>
+                <p class="card-text mt-4">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.98)
+                </p>
+                <p class="fs-6 mt-4">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn mt-">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/1704974672404.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="first-img rounded-end-pill w-50 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small m-2 text-light">Recommended</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 11 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 5 Months
+                  </p>
+                </div>
+                <h5 class="card-title">
+                  Software Testing Training (AI Powered) - Manual & Automation
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.88)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- </div> -->
+        <!-- header-2 -->
+        <!-- <div class="row"> -->
+          <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/django-course-thumbnail.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="img-green rounded-end-pill w-50 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small-small m-2 text-light">Most Placed</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 5 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 6.5 Months
+                  </p>
+                </div>
+                <h5 class="card-title">
+                  Python Django - React - Full Stack Web Development Expert
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.67)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/ds_cjuFo7i.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="first-img rounded-end-pill w-50 position-absolute bottom-0 start-0"
+                >
+                  <p class=" shine-small m-2 text-light">Recommended</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 10 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 7 Months
+                  </p>
+                </div>
+                <h5 class="card-title">
+                  PYTHON DATA SCIENCE - ML - AI - & Power BI
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.95)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/spring_M2WFgIG.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="img-green rounded-end-pill w-50 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small-small m-2 text-light">Most Placed</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 8 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 4 Months
+                  </p>
+                </div>
+                <h5 class="card-title">Java Spring Full Stack Development</h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.76)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!-- header3 -->
+        <!-- <div class="row mb-5"> -->
+          <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/asp.net.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="img-green rounded-end-pill w-50 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small-small m-2 text-light">Most Placed</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 9 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 5 Months
+                  </p>
+                </div>
+                <h5 class="card-title">
+                  Asp.net MVC with Angular - Full Stack
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.78)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/data_analysis_Khz1Nw4.webp"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="img-blue rounded-end-pill w-25 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small-small m-2 text-light">new</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 4 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 4 Months
+                  </p>
+                </div>
+                <h5 class="card-title">Python Data Analytics with Power BI</h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.98)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+            <div class="card" style="width: 350px">
+              <div class="position-relative img-little-head">
+                <img
+                  height="230px"
+                  src=".//assets/flutter.webp"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div
+                  class="first-img rounded-end-pill w-50 position-absolute bottom-0 start-0"
+                >
+                  <p class="shine-small m-2 text-light">Recommended</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-file-lines"></i> 4 Modules
+                  </p>
+                  <p class="text-secondary">
+                    <i class="fa-solid fa-clock"></i> 5 Months
+                  </p>
+                </div>
+                <h5 class="card-title">
+                  Best Flutter Training In Kochi (Cochin) & Calicut (Kozhikode)
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i
+                  ><i class="fa-solid fa-star text-warning"></i>(4.9)
+                </p>
+                <p class="fs-6">
+                  <i class="fa-solid fa-trophy text-warning"></i>100% Placement
+                  assistance <i class="fa-solid fa-trophy text-warning"></i>
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn">See More..</a>
+                </div>
+              </div>
+            </div>
+          </div>  </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
